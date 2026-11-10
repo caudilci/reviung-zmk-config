@@ -32,12 +32,13 @@
 #define L_FUN   4
 #define L_MEDIA 5
 
-/* Miryoku clipboard helpers (LGUI = Ctrl on macOS) */
-#define U_UND &kp LG(Z)
-#define U_CUT &kp LG(X)
-#define U_CPY &kp LG(C)
-#define U_PST &kp LG(V)
-#define U_RDO &kp LG(LS(Z))
+/* Miryoku clipboard helpers. Ctrl-based for Linux/Windows;
+   swap LC( for LG( if you drive this board from macOS. */
+#define U_UND &kp LC(Z)
+#define U_CUT &kp LC(X)
+#define U_CPY &kp LC(C)
+#define U_PST &kp LC(V)
+#define U_RDO &kp LC(LS(Z))
 
 / {
     behaviors {
