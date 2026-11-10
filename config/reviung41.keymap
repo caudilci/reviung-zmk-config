@@ -32,13 +32,13 @@
 #define L_FUN   4
 #define L_MEDIA 5
 
-/* Miryoku clipboard helpers. Ctrl-based for Linux/Windows;
-   swap LC( for LG( if you drive this board from macOS. */
-#define U_UND &kp LC(Z)
-#define U_CUT &kp LC(X)
-#define U_CPY &kp LC(C)
-#define U_PST &kp LC(V)
-#define U_RDO &kp LC(LS(Z))
+/* Miryoku clipboard helpers. Cmd-based for macOS;
+   swap LG( back to LC( for Linux/Windows. */
+#define U_UND &kp LG(Z)
+#define U_CUT &kp LG(X)
+#define U_CPY &kp LG(C)
+#define U_PST &kp LG(V)
+#define U_RDO &kp LG(LS(Z))
 
 / {
     behaviors {
@@ -119,7 +119,7 @@
             bindings = <
     &bootloader   &trans         &trans         &trans          &trans         &trans          &rgb_ug RGB_TOG  &rgb_ug RGB_EFF  &rgb_ug RGB_HUI &rgb_ug RGB_SAI  &rgb_ug RGB_BRI &trans
     &trans        &kp LGUI       &kp LALT       &kp LCTRL       &kp LSHFT      &trans          &kp C_PREV       &kp C_VOL_DN    &kp C_VOL_UP    &kp C_NEXT       &kp C_MUTE      &trans
-    &trans        &trans         &trans         &trans          &trans         &trans          &out OUT_TOG     &bt BT_SEL 0    &bt BT_SEL 1    &bt BT_SEL 2     &bt BT_SEL 3    &trans
+    &trans        &trans         &trans         &trans          &trans         &trans          &out OUT_TOG     &bt BT_SEL 0    &bt BT_SEL 1    &bt BT_SEL 2     &bt BT_SEL 3    &bt BT_CLR
                                                         &trans              &trans              &kp C_STOP        &kp C_PP          &trans
             >;
         };
